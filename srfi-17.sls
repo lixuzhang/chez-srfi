@@ -1,4 +1,4 @@
-(library (srfi :17)
+(library (srfi srfi-17)
   (export getter-with-setter set!
           car cdr
           caar cadr cdar cddr
@@ -18,4 +18,4 @@
           bytevector-u64-ref bytevector-u8-ref bytevector-uint-ref
           foreign-ref fxvector-ref hashtable-ref eq-hashtable-ref
           symbol-hashtable-ref list-ref)
-  (import (srfi :17 generalized-set!)))
+  (import (srfi srfi-17 generalized-set)))

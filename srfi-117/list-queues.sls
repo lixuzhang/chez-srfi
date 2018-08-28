@@ -1,4 +1,4 @@
-(library (srfi :117 list-queues)
+(library (srfi srfi-117 list-queues)
   (export
     make-list-queue list-queue list-queue-copy list-queue-unfold list-queue-unfold-right
     list-queue? list-queue-empty?
@@ -8,10 +8,10 @@
     list-queue-append list-queue-append! list-queue-concatenate
     list-queue-map list-queue-map! list-queue-for-each)
   (import
-    (only (srfi :23) error)
+    (only (srfi srfi-23) error)
     (except (rnrs base) error)
     (rnrs control)
     (rnrs mutable-pairs)
     (rnrs records syntactic)
     (srfi private include))
-  (include/resolve ("srfi" "%3a117") "list-queues-impl.scm"))
+  (include/resolve ("srfi" "srfi-117") "list-queues-impl.scm"))

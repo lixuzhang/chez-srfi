@@ -1,4 +1,4 @@
-(library (srfi :125 hashtables)
+(library (srfi srfi-125 hashtables)
   (export
     make-hash-table hash-table hash-table-unfold alist->hash-table
 
@@ -38,7 +38,7 @@
                   hashtable-ref hashtable-update! make-eq-hashtable
                   make-eqv-hashtable)
           (srfi private include)
-          (rename (srfi :126)
+          (rename (srfi srfi-126)
                   (hashtable? hash-table?)
                   (hashtable-contains? hash-table-contains?)
                   (hashtable-empty? hash-table-empty?)
@@ -50,7 +50,7 @@
                   (hashtable-merge! hash-table-merge!)
                   (hashtable-hash-function hash-table-hash-function)
                   (hashtable-equivalence-function hash-table-equivalence-function))
-          (except (srfi :128) hash-salt string-hash string-ci-hash symbol-hash))
+          (except (srfi srfi-128) hash-salt string-hash string-ci-hash symbol-hash))
 
-  (include/resolve ("srfi" "%3a125") "125.body.scm"))
+  (include/resolve ("srfi" "srfi-125") "125.body.scm"))
 

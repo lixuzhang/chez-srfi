@@ -1,6 +1,6 @@
-(library (srfi :28 basic-format-strings)
+(library (srfi srfi-28 basic-format-strings)
   (export format)
-  (import (rnrs) (srfi :6))
+  (import (rnrs) (srfi srfi-6))
 
   ;; reference implementation from srfi :28 documentation
 

@@ -1,1 +1,3 @@
-(library (srfi :5) (export let) (import (srfi :5 let)))
+(library (srfi srfi-5)
+  (export let)
+  (import (srfi srfi-5 let)))

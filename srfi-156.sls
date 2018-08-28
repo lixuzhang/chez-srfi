@@ -1,3 +1,3 @@
-(library (srfi :156)
+(library (srfi srfi-156)
   (export is isnt)
-  (import (srfi :156 predicate-combiners)))
+  (import (srfi srfi-156 predicate-combiners)))

@@ -1,5 +1,5 @@
-(library (srfi :133 vectors)
-  (export 
+(library (srfi srfi-133 vectors)
+  (export
     ;;; * Constructors
     vector-unfold vector-unfold-right vector-copy vector-reverse-copy
     vector-append vector-concatenate vector-append-subvectors
@@ -28,4 +28,4 @@
                   (list->vector rnrs:list->vector))
           (rnrs mutable-strings)
           (srfi private include))
-  (include/resolve ("srfi" "%3a133") "vectors-impl.scm"))
+  (include/resolve ("srfi" "srfi-133") "vectors-impl.scm"))

@@ -5,8 +5,8 @@
 (import
   (rnrs)
   (rnrs eval)
-  (srfi :2 and-let*)
-  (srfi :78 lightweight-testing))
+  (srfi srfi-2 and-let)
+  (srfi srfi-78 lightweight-testing))
 
 (define-syntax expect
   (syntax-rules ()
@@ -18,7 +18,7 @@
     ((_ expr)
      (check
        (guard (ex (#T (syntax-violation? ex)))
-         (eval 'expr (environment '(rnrs) '(srfi :2 and-let*)))
+         (eval 'expr (environment '(rnrs) '(srfi srfi-2 and-let)))
          'unexpected-return)
        => #T))))
 

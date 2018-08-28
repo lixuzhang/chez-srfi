@@ -1,7 +1,7 @@
-(library (srfi :131 records)
+(library (srfi srfi-131 records)
   (export define-record-type)
   (import (except (rnrs) define-record-type)
-          (srfi :99 records procedural))
+          (srfi srfi-99 records procedural))
 
   (define-syntax define-record-type
     (syntax-rules ()
@@ -64,19 +64,19 @@
 
   (define-syntax define-record-type-helper
     (syntax-rules ()
-  
+
      ((_ type-name fields parent #f predicate
          ((accessor field) ...) ((mutator mutable-field) ...))
       (define-record-type-helper
        type-name fields parent ignored predicate
        ((accessor field) ...) ((mutator mutable-field) ...)))
-  
+
      ((_ type-name fields parent constructor #f
          ((accessor field) ...) ((mutator mutable-field) ...))
       (define-record-type-helper
        type-name fields parent constructor ignored
        ((accessor field) ...) ((mutator mutable-field) ...)))
-  
+
      ((_ type-name fields parent (constructor args) predicate
          ((accessor field) ...) ((mutator mutable-field) ...))
       (begin (define type-name (make-rtd 'type-name 'fields parent))
@@ -86,7 +86,7 @@
              ...
              (define mutator (rtd-mutator type-name 'mutable-field))
              ...))
-  
+
      ((_ type-name fields parent constructor predicate
          ((accessor field) ...) ((mutator mutable-field) ...))
       (begin (define type-name (make-rtd 'type-name 'fields parent))

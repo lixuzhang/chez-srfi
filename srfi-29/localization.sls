@@ -1,8 +1,8 @@
-(library (srfi :29 localization)
+(library (srfi srfi-29 localization)
   (export current-language current-country current-locale-details
           declare-bundle! store-bundle store-bundle! load-bundle!
           localized-template)
-  (import (rnrs) (srfi :6))
+  (import (rnrs) (srfi srfi-6))
 
   (define (current-locale-details . args)
     (error 'current-locale-details

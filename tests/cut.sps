@@ -4,9 +4,9 @@
 
 (import
   (except (rnrs) display newline)
-  (srfi :78 lightweight-testing)
+  (srfi srfi-78 lightweight-testing)
   (srfi private include)
-  (srfi :26 cut))
+  (srfi srfi-26 cut))
 
 (define (ignore . _) (values))
 (define display ignore)
@@ -18,7 +18,7 @@
                         (begin))
                        ((_ (check-all) (for-each check '((equal? expr val) ...)))
                         (begin (check expr => val) ...)))))
-  (include/resolve ("srfi" "%3a26") "check.scm"))
+  (include/resolve ("srfi" "srfi-26") "check.scm"))
 
 ;;;; free-identifier=? of <> and <...>
 

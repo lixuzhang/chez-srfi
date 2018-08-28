@@ -1,3 +1,3 @@
-(library (srfi :145)
+(library (srfi srfi-145)
   (export assume)
-  (import (srfi :145 assumptions)))
+  (import (srfi srfi-145 assumptions)))

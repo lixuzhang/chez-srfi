@@ -1,4 +1,4 @@
-(library (srfi :60 integer-bits)
+(library (srfi srfi-60 integer-bits)
   (export logand bitwise-and logior bitwise-ior logxor bitwise-xor lognot
           bitwise-not bitwise-if bitwise-merge logtest any-bits-set? logcount
           bit-count integer-length log2-binary-factors first-set-bit logbit?

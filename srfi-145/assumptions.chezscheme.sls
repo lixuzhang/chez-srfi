@@ -1,4 +1,4 @@
-(library (srfi :145 assumptions)
+(library (srfi srfi-145 assumptions)
   (export assume)
   (import (chezscheme))
 

@@ -2,7 +2,7 @@
 ;; Copyright 2009 Derick Eddington.  My MIT-style license is in the file named
 ;; LICENSE from the original collection this file is distributed with.
 
-(library (srfi :64 testing)
+(library (srfi srfi-64 testing)
   (export
     test-begin
     test-end test-assert test-eqv test-eq test-equal
@@ -46,12 +46,12 @@
     (rnrs lists)
     (rename (rnrs eval) (eval rnrs:eval))
     (rnrs mutable-pairs)
-    (srfi :0 cond-expand)
-    (only (srfi :1 lists) reverse!)
-    (srfi :6 basic-string-ports)
-    (srfi :9 records)
-    (srfi :39 parameters)
-    (srfi :23 error tricks)
+    (srfi srfi-0 cond-expand)
+    (only (srfi srfi-1 lists) reverse!)
+    (srfi srfi-6 basic-string-ports)
+    (srfi srfi-9 records)
+    (srfi srfi-39 parameters)
+    (srfi srfi-23 error tricks)
     (srfi private include))
 
   (define (eval form)
@@ -66,8 +66,8 @@
       (() test-log-to-file)
       ((val) (set! test-log-to-file val))))
 
-  (SRFI-23-error->R6RS "(library (srfi :64 testing))"
-   (include/resolve ("srfi" "%3a64") "testing.scm"))
+  (SRFI-23-error->R6RS "(library (srfi srfi-64 testing))"
+   (include/resolve ("srfi" "srfi-64") "testing.scm"))
 
   (set! test-log-to-file #F)
 )

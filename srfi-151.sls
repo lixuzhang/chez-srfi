@@ -1,4 +1,4 @@
-(library (srfi :151)
+(library (srfi srfi-151)
   (export
     bitwise-not
     bitwise-and   bitwise-ior 
@@ -23,4 +23,4 @@
     bits
     bitwise-fold bitwise-for-each bitwise-unfold
     make-bitwise-generator)
-  (import (srfi :151 bitwise-operations)))
+  (import (srfi srfi-151 bitwise-operations)))

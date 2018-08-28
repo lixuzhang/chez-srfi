@@ -1,5 +1,5 @@
-(library (srfi :130 string-cursors)
-  (export 
+(library (srfi srfi-130 string-cursors)
+  (export
     string-cursor? string-cursor-start string-cursor-end string-cursor-next
     string-cursor-prev string-cursor-forward string-cursor-back string-cursor=?
     string-cursor<? string-cursor>? string-cursor<=? string-cursor>=?
@@ -16,7 +16,7 @@
     string-take-right string-drop string-drop-right string-pad string-pad-right
     string-trim string-trim-right string-trim-both
 
-    string-prefix-length string-suffix-length string-prefix? string-suffix? 
+    string-prefix-length string-suffix-length string-prefix? string-suffix?
 
     string-index string-index-right string-skip string-skip-right
     string-contains string-contains-right
@@ -25,7 +25,7 @@
     string-fold-right string-for-each-cursor string-replicate string-count
     string-replace string-split string-filter string-remove)
   (import (rnrs)
-          (rename (only (srfi :13) string-index string-index-right
+          (rename (only (srfi srfi-13) string-index string-index-right
                         string-contains string-filter string-replace
                         string-count string-fold-right string-fold
                         string-concatenate-reverse string-concatenate
@@ -38,6 +38,6 @@
                         string-tabulate string-any string-every string-null?)
                   (string-index srfi-13:string-index)
                   (string-index-right srfi-13:string-index-right))
-          (only (srfi :1) last-pair)
+          (only (srfi srfi-1) last-pair)
           (srfi private include))
-  (include/resolve ("srfi" "%3a130") "130.body.scm"))
+  (include/resolve ("srfi" "srfi-130") "130.body.scm"))

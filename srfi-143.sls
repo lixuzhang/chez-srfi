@@ -1,4 +1,4 @@
-(library (srfi :143)
+(library (srfi srfi-143)
   (export
     fx-width fx-greatest fx-least
 
@@ -12,4 +12,4 @@
     fxnot fxand fxior fxxor fxarithmetic-shift fxarithmetic-shift-left
     fxarithmetic-shift-right fxbit-count fxlength fxif fxbit-set? fxcopy-bit
     fxfirst-set-bit fxbit-field fxbit-field-rotate fxbit-field-reverse)
-  (import (srfi :143 fixnums)))
+  (import (srfi srfi-143 fixnums)))

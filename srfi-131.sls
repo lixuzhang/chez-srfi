@@ -1,3 +1,3 @@
-(library (srfi :131)
+(library (srfi srfi-131)
   (export define-record-type)
-  (import (srfi :131 records)))
+  (import (srfi srfi-131 records)))

@@ -1,3 +1,3 @@
-(library (srfi :54)
+(library (srfi srfi-54)
   (export cat)
-  (import (srfi :54 cat)))
+  (import (srfi srfi-54 cat)))

@@ -1,5 +1,5 @@
-(library (srfi :152 strings)
-  (export 
+(library (srfi srfi-152 strings)
+  (export
     ;; Predicates
     string? string-null? string-every string-any
 
@@ -45,7 +45,7 @@
 
     ;; Mutation
     string-set! string-fill! string-copy!)
-  (import (rename 
+  (import (rename
             (except (rnrs) string->list string-for-each string-copy error)
             (string=? base-string=?)
             (string<? base-string<?)
@@ -59,10 +59,10 @@
             (string-ci>=? base-string-ci>=?))
           (except (rnrs mutable-strings) string-fill!)
           (rnrs r5rs)
-          (srfi :0) (srfi :23)
+          (srfi srfi-0) (srfi srfi-23)
           (srfi private include))
 
-  (include/resolve ("srfi" "%3a152") "macros.scm")
-  (include/resolve ("srfi" "%3a152") "portable.scm")
-  (include/resolve ("srfi" "%3a152") "r7rs-shim.scm")
-  (include/resolve ("srfi" "%3a152") "extend-comparisons.scm"))
+  (include/resolve ("srfi" "srfi-152") "macros.scm")
+  (include/resolve ("srfi" "srfi-152") "portable.scm")
+  (include/resolve ("srfi" "srfi-152") "r7rs-shim.scm")
+  (include/resolve ("srfi" "srfi-152") "extend-comparisons.scm"))

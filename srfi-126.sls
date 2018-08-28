@@ -1,4 +1,4 @@
-(library (srfi :126)
+(library (srfi srfi-126)
   (export make-eq-hashtable make-eqv-hashtable make-hashtable
           alist->eq-hashtable alist->eqv-hashtable alist->hashtable weakness
           hashtable? hashtable-size hashtable-ref hashtable-set!
@@ -12,5 +12,4 @@
           hashtable-dec! hashtable-equivalence-function hashtable-hash-function
           hashtable-weakness hashtable-mutable? hash-salt equal-hash
           string-hash string-ci-hash symbol-hash)
-  (import (srfi :126 r6rs-hashtables)))
-  
+  (import (srfi srfi-126 r6rs-hashtables)))

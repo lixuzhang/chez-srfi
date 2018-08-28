@@ -1,4 +1,4 @@
-(library (srfi :4)
+(library (srfi srfi-4)
   (export
     s8vector? make-s8vector s8vector s8vector-length s8vector-ref s8vector-set!
     s8vector->list list->s8vector
@@ -29,4 +29,4 @@
 
     f64vector? make-f64vector f64vector f64vector-length f64vector-ref
     f64vector-set! f64vector->list list->f64vector)
-  (import (srfi :4 numeric-vectors)))
+  (import (srfi srfi-4 numeric-vectors)))

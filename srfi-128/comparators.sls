@@ -1,4 +1,4 @@
-(library (srfi :128 comparators)
+(library (srfi srfi-128 comparators)
   (export comparator? comparator-ordered? comparator-hashable? make-comparator
           make-pair-comparator make-list-comparator make-vector-comparator
           make-eq-comparator make-eqv-comparator make-equal-comparator
@@ -10,11 +10,11 @@
           comparator-hash hash-bound hash-salt =? <? >? <=? >=?
           comparator-if<=>)
   (import (except (rnrs) define-record-type)
-          (srfi :99)
-          (srfi :39)
+          (srfi srfi-99)
+          (srfi srfi-39)
           (only (rnrs r5rs) modulo)
           (srfi private include))
   (define (exact-integer? x) (and (integer? x) (exact? x)))
-  (include/resolve ("srfi" "%3a128") "128.body1.scm")
-  (include/resolve ("srfi" "%3a128") "128.body2.scm"))
+  (include/resolve ("srfi" "srfi-128") "128.body1.scm")
+  (include/resolve ("srfi" "srfi-128") "128.body2.scm"))
 

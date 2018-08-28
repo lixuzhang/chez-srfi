@@ -5,9 +5,9 @@
 
 (import
   (rnrs)
-  (srfi :14 char-sets inversion-list)
-  (srfi :14 char-sets)
-  (srfi :48 intermediate-format-strings)
+  (srfi srfi-14 char-sets inversion-list)
+  (srfi srfi-14 char-sets)
+  (srfi srfi-48 intermediate-format-strings)
   (srfi private include))
 
 ;; Compatibility for Scheme 48 test suites
@@ -59,5 +59,5 @@
 (define char->scalar-value char->integer)
 (define scalar-value->char integer->char)
 
-(include/resolve ("srfi" "%3a14" "char-sets") "inversion-list-check.scm")
-(include/resolve ("srfi" "%3a14") "srfi-14-check.scm")
+(include/resolve ("srfi" "srfi-14" "char-sets") "inversion-list-check.scm")
+(include/resolve ("srfi" "srfi-14") "srfi-14-check.scm")

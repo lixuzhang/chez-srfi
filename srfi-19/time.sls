@@ -2,7 +2,7 @@
 ;; Copyright 2010 Derick Eddington.  My MIT-style license is in the file named
 ;; LICENSE from the original collection this file is distributed with.
 
-(library (srfi :19 time)
+(library (srfi srfi-19 time)
   (export
     time-duration
     time-monotonic
@@ -88,8 +88,8 @@
     (rnrs)
     (rnrs r5rs)
     (rnrs mutable-strings)
-    (prefix (srfi :19 time compat) host:)
-    (srfi :6 basic-string-ports)
+    (prefix (srfi srfi-19 time compat) host:)
+    (srfi srfi-6 basic-string-ports)
     (for (srfi private vanish) expand)
     (srfi private include))
 
@@ -177,5 +177,5 @@
                                               set-date-year!
                                               set-date-zone-offset!
                                               tm:local-tz-offset))))
-    (include/resolve ("srfi" "%3a19") "srfi-19.scm"))
+    (include/resolve ("srfi" "srfi-19") "srfi-19.scm"))
 )

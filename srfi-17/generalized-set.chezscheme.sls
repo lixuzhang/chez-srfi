@@ -1,4 +1,4 @@
-(library (srfi :17 generalized-set!)
+(library (srfi srfi-17 generalized-set)
   (export getter-with-setter set!
           car cdr
           caar cadr cdar cddr

@@ -1,4 +1,4 @@
-(library (srfi :127 lazy-sequences)
+(library (srfi srfi-127 lazy-sequences)
   (export generator->lseq lseq? lseq=?
 
           lseq-car lseq-first lseq-cdr lseq-rest lseq-ref lseq-take lseq-drop
@@ -9,6 +9,6 @@
 
           lseq-find lseq-find-tail lseq-take-while lseq-drop-while
 
-          lseq-any lseq-every lseq-index lseq-member lseq-memq lseq-memv)  
+          lseq-any lseq-every lseq-index lseq-member lseq-memq lseq-memv)
   (import (rnrs) (rnrs mutable-pairs) (srfi private include))
-  (include/resolve ("srfi" "%3a127") "lseqs-impl.scm"))
+  (include/resolve ("srfi" "srfi-127") "lseqs-impl.scm"))

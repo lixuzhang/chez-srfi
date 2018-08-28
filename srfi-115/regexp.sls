@@ -26,7 +26,7 @@
 
 ;; Converted from lib/chibi/regexp.sld to R6RS by Göran Weinholt.
 
-(library (srfi :115 regexp)
+(library (srfi srfi-115 regexp)
   (export regexp regexp? valid-sre? rx regexp->sre char-set->sre
           regexp-matches regexp-matches? regexp-search
           regexp-replace regexp-replace-all
@@ -40,11 +40,11 @@
                   (exists any))
           (only (rnrs r5rs) quotient)
           (rnrs mutable-pairs)
-          (srfi :9 records)
-          (srfi :14 char-sets)
-          (srfi :23 error)
-          (srfi :69 basic-hash-tables)
-          (srfi :115 regexp boundary)
+          (srfi srfi-9 records)
+          (srfi srfi-14 char-sets)
+          (srfi srfi-23 error)
+          (srfi srfi-69 basic-hash-tables)
+          (srfi srfi-115 regexp boundary)
           (srfi private include))
 
   (define %char-set:letter
@@ -91,4 +91,4 @@
     (string-concatenate (reverse ls)))
 
   ;; Replaced |\|| with \x7C;.
-  (include/resolve ("srfi" "%3a115") "regexp.scm"))
+  (include/resolve ("srfi" "srfi-115") "regexp.scm"))

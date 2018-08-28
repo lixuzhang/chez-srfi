@@ -1,6 +1,6 @@
-(library (srfi :34 exception-handling)
+(library (srfi srfi-34 exception-handling)
   (export with-exception-handler guard raise)
-  (import (except (rnrs) with-exception-handler guard raise error) (srfi :23))
+  (import (except (rnrs) with-exception-handler guard raise error) (srfi srfi-23))
 
   ;; reference implementation from srfi :34 documentation (though it closely matches the existing rnrs facility)
 

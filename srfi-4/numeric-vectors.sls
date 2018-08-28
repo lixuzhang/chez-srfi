@@ -1,4 +1,4 @@
-(library (srfi :4 numeric-vectors)
+(library (srfi srfi-4 numeric-vectors)
   (export
     s8vector? make-s8vector s8vector s8vector-length s8vector-ref s8vector-set!
     s8vector->list list->s8vector

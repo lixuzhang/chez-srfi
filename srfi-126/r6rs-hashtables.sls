@@ -1,4 +1,4 @@
-(library (srfi :126 r6rs-hashtables)
+(library (srfi srfi-126 r6rs-hashtables)
   (export make-eq-hashtable make-eqv-hashtable make-hashtable
           alist->eq-hashtable alist->eqv-hashtable alist->hashtable weakness
           hashtable? hashtable-size hashtable-ref hashtable-set!
@@ -20,7 +20,7 @@
                   (hashtable-update! rnrs:hashtable-update!)
                   (hashtable-copy rnrs:hashtable-copy)
                   (hashtable-clear! rnrs:hashtable-clear!))
-          (srfi :0 cond-expand)
-          (srfi :126 helpers helpers)
+          (srfi srfi-0 cond-expand)
+          (srfi srfi-126 helpers helpers)
           (srfi private include))
-  (include/resolve ("srfi" "%3a126") "126.body.scm"))
+  (include/resolve ("srfi" "srfi-126") "126.body.scm"))

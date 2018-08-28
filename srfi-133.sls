@@ -1,4 +1,4 @@
-(library (srfi :133)
+(library (srfi srfi-133)
   (export
     ;; Constructors 
     vector-unfold vector-unfold-right vector-reverse-copy 
@@ -16,4 +16,4 @@
     vector-reverse-copy! vector-unfold! vector-unfold-right!
     ;; Conversion 
     reverse-vector->list reverse-list->vector)
-  (import (srfi :133 vectors)))
+  (import (srfi srfi-133 vectors)))

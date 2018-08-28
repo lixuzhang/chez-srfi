@@ -1,4 +1,4 @@
-(library (srfi :5 let)
+(library (srfi srfi-5 let)
   (export let)
   (import (rename (rnrs) (let standard-let)))
 

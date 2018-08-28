@@ -1,4 +1,4 @@
-(library (srfi :130)
+(library (srfi srfi-130)
   (export 
     string-cursor? string-cursor-start string-cursor-end string-cursor-next
     string-cursor-prev string-cursor-forward string-cursor-back string-cursor=?
@@ -24,4 +24,4 @@
     string-reverse string-concatenate string-concatenate-reverse string-fold
     string-fold-right string-for-each-cursor string-replicate string-count
     string-replace string-split string-filter string-remove)
-  (import (srfi :130 string-cursors)))
+  (import (srfi srfi-130 string-cursors)))

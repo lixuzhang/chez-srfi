@@ -2,7 +2,7 @@
 ;; Copyright 2009 Derick Eddington.  My MIT-style license is in the file named
 ;; LICENSE from the original collection this file is distributed with.
 
-(library (srfi :25 multi-dimensional-arrays arlib)
+(library (srfi srfi-25 multi-dimensional-arrays arlib)
   (export
     array-shape
     array-length
@@ -28,10 +28,10 @@
   (import
     (rnrs)
     (rnrs r5rs)
-    (srfi :23 error tricks)
-    (srfi :25 multi-dimensional-arrays all)
+    (srfi srfi-23 error tricks)
+    (srfi srfi-25 multi-dimensional-arrays all)
     (srfi private include))
 
-  (SRFI-23-error->R6RS "(library (srfi :25 multi-dimensional-arrays arlib))"
-   (include/resolve ("srfi" "%3a25") "arlib.scm"))
+  (SRFI-23-error->R6RS "(library (srfi srfi-25 multi-dimensional-arrays arlib))"
+   (include/resolve ("srfi" "srfi-25") "arlib.scm"))
 )

@@ -1,10 +1,10 @@
 ;;; Copyright (c) 2012 Aaron W. Hsu <arcfide@sacrideo.us>
-;;; 
+;;;
 ;;; Permission to use, copy, modify, and distribute this software for
 ;;; any purpose with or without fee is hereby granted, provided that the
 ;;; above copyright notice and this permission notice appear in all
 ;;; copies.
-;;; 
+;;;
 ;;; THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
 ;;; WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
 ;;; WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
@@ -14,7 +14,7 @@
 ;;; TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 ;;; PERFORMANCE OF THIS SOFTWARE.
 
-(library (srfi :98 os-environment-variables)
+(library (srfi srfi-98 os-environment-variables)
   (export get-environment-variables
         (rename (getenv get-environment-variable)))
   (import (rnrs) (rnrs mutable-strings)
@@ -61,7 +61,7 @@
              (s1 ptr (fx+ offset (ftype-sizeof char))
                  tb (extract-and-clear-buffer! tb))]
             [else
-             (extend-buffer! tb c) 
+             (extend-buffer! tb c)
              (s0 ptr (fx+ offset (ftype-sizeof char)) tb)])))
       (define (s1 ptr offset tb key)
         (let ([c (foreign-ref 'char ptr offset)])
@@ -94,7 +94,7 @@
                                   (read-entry entry-ptr 0 tb)])
                       (loop (fx+ offset (ftype-sizeof void*))
                             (cons entry ls))))))))))
-            
+
   (define get-environ-pointer
     (case (machine-type)
       [(i3nt a6nt ti3nt ta6nt)

@@ -1,5 +1,5 @@
 #!r6rs
-(library (srfi :117)
+(library (srfi srfi-117)
   (export
     make-list-queue list-queue list-queue-copy list-queue-unfold list-queue-unfold-right
     list-queue? list-queue-empty?
@@ -9,5 +9,5 @@
     list-queue-append list-queue-append! list-queue-concatenate
     list-queue-map list-queue-map! list-queue-for-each
     )
-  (import (srfi :117 list-queues))
+  (import (srfi srfi-117 list-queues))
 )

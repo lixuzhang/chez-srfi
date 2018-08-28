@@ -1,4 +1,4 @@
-(library (srfi :152)
+(library (srfi srfi-152)
   (export 
     ;; Predicates
     string? string-null? string-every string-any
@@ -45,4 +45,4 @@
 
     ;; Mutation
     string-set! string-fill! string-copy!)
-  (import (srfi :152 strings)))
+  (import (srfi srfi-152 strings)))

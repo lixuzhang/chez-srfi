@@ -1,3 +1,3 @@
-(library (srfi :129)
+(library (srfi srfi-129)
   (export char-title-case? char-titlecase string-titlecase)
-  (import (srfi :129 titlecase)))
+  (import (srfi srfi-129 titlecase)))

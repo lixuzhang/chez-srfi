@@ -19,7 +19,7 @@
 ;; CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 ;; SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-(library (srfi :99 records)
+(library (srfi srfi-99 records)
 
   (export record? record-rtd
           rtd-name rtd-parent
@@ -30,6 +30,6 @@
 
           define-record-type)
 
-  (import (srfi :99 records inspection)
-          (srfi :99 records procedural)
-          (srfi :99 records syntactic)))
+  (import (srfi srfi-99 records inspection)
+          (srfi srfi-99 records procedural)
+          (srfi srfi-99 records syntactic)))

@@ -2,7 +2,7 @@
 ;; Copyright 2010 Derick Eddington.  My MIT-style license is in the file named
 ;; LICENSE from the original collection this file is distributed with.
 
-(library (srfi :67 compare-procedures)
+(library (srfi srfi-67 compare-procedures)
   (export
     </<=? </<? <=/<=? <=/<? <=? <? =?
     >/>=? >/>? >=/>=? >=/>? >=? >?
@@ -21,9 +21,9 @@
   (import
     (except (rnrs) error)
     (only (rnrs r5rs) modulo)
-    (only (srfi :27 random-bits) random-integer)
-    (srfi :23 error)
+    (only (srfi srfi-27 random-bits) random-integer)
+    (srfi srfi-23 error)
     (srfi private include))
 
-  (include/resolve ("srfi" "%3a67") "compare.scm")
+  (include/resolve ("srfi" "srfi-67") "compare.scm")
 )

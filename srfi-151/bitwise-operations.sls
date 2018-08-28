@@ -1,14 +1,14 @@
-(library (srfi :151 bitwise-operations)
+(library (srfi srfi-151 bitwise-operations)
   (export
     bitwise-not
-    bitwise-and   bitwise-ior 
+    bitwise-and   bitwise-ior
     bitwise-xor   bitwise-eqv
-    bitwise-nand  bitwise-nor 
+    bitwise-nand  bitwise-nor
     bitwise-andc1 bitwise-andc2
-    bitwise-orc1  bitwise-orc2 
+    bitwise-orc1  bitwise-orc2
 
-    arithmetic-shift bit-count 
-    integer-length bitwise-if 
+    arithmetic-shift bit-count
+    integer-length bitwise-if
 
     bit-set? copy-bit bit-swap
     any-bit-set? every-bit-set?
@@ -183,7 +183,7 @@
            [idx 0 (fx+ idx 1)]
            [i 0 (bitwise-copy-bit i idx (if (mapper state) 1 0))])
         ((stop? state) i))))
-              
+
   (define make-bitwise-generator
     (lambda (i)
       (let ([idx 0])

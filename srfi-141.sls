@@ -1,4 +1,4 @@
-(library (srfi :141)
+(library (srfi srfi-141)
   (export
     ceiling/ ceiling-quotient ceiling-remainder
     floor/ floor-quotient floor-remainder
@@ -6,6 +6,6 @@
     round/ round-quotient round-remainder
     euclidean/ euclidean-quotient euclidean-remainder
     balanced/ balanced-quotient balanced-remainder)
-  (import (srfi :141 integer-division)))
+  (import (srfi srfi-141 integer-division)))
 
 
